@@ -181,6 +181,7 @@ var WikiquoteApi = (function() {
 
     var chooseQuote = function(quotes) {
       var randomNum = Math.floor(Math.random()*quotes.quotes.length);
+      console.log(quotes);
       success({ titles: quotes.titles, quote: quotes.quotes[randomNum] });
     };
 
