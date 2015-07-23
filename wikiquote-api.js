@@ -117,15 +117,17 @@ var WikiquoteApi = (function() {
       },
 
       success: function(result, status){
-        console.log(result);
+        
         var quotes = result.parse.text["*"];
         var quoteArray = []
 
-        console.log(quotes);
         // Find top level <li> only
         var $lis = $(quotes).find('li:not(li li)');
+        
         $lis.each(function() {
           // Remove all children that aren't <b>
+          var author = $(this).find('ul li a').html();
+          console.log(author);
           $(this).children().remove(':not(b)');
           var $bolds = $(this).find('b');
 
