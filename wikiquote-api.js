@@ -120,6 +120,7 @@ var WikiquoteApi = (function() {
         var quotes = result.parse.text["*"];
         var quoteArray = []
 
+        console.log(quotes);
         // Find top level <li> only
         var $lis = $(quotes).find('li:not(li li)');
         $lis.each(function() {
@@ -181,7 +182,6 @@ var WikiquoteApi = (function() {
 
     var chooseQuote = function(quotes) {
       var randomNum = Math.floor(Math.random()*quotes.quotes.length);
-      console.log(quotes);
       success({ titles: quotes.titles, quote: quotes.quotes[randomNum] });
     };
 
