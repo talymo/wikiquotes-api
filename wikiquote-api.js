@@ -126,7 +126,6 @@ var WikiquoteApi = (function() {
           $lis.each(function() {
             // Remove all children that aren't <b>
             var $as = $(this).find('li a').html();
-            console.log($as);
             $(this).children().remove(':not(b)');
             var $bolds = $(this).find('b');
         
