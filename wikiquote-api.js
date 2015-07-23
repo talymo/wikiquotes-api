@@ -117,6 +117,7 @@ var WikiquoteApi = (function() {
       },
 
       success: function(result, status){
+        console.log(result);
         var quotes = result.parse.text["*"];
         var quoteArray = []
 
